@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "Cardigan",
+      "price": "35.00",
+      "quantity": "50",
+      "id": 2
+    },
+    {
+      "name": "Jeans",
+      "price": "25.99",
+      "quantity": "45",
+      "id": 3
+    },
+    {
+      "name": "Shirt",
+      "price": "21",
+      "quantity": "60",
+      "id": 4
+    },
+    {
+      "name": "Jumper",
+      "price": "30",
+      "quantity": "73",
+      "id": 5
+    }
+  ],
+  "Cart": []
+}
