@@ -13,7 +13,7 @@ function CreateItem() {
         event.preventDefault();
 
 
-axios.post("http://localhost:3001/items", {name, price:parseFloat(price), quantity})
+axios.post("http://localhost:3001/items", {name, price: parseFloat(price), quantity})
 
 .then(response =>
     {
