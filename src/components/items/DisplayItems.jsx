@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import ItemsPT from "./ItemsPT"
 
 
 function DisplayItems() {
     
-    const [items, setItems] = useState();
+    const [items, setItems] = useState([]);
 
 
         axios.get("http://localhost:3001/items")
@@ -17,7 +18,7 @@ function DisplayItems() {
         const itemArray = [];
         for (const item of items) {
             itemArray.push(
-                <  ItempsPT
+                <  ItemsPT
                     Name={item.name}
                     Price={item.price}
                     Quantity={item.quantity}

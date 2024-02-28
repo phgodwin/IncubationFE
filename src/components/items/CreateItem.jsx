@@ -38,7 +38,7 @@ axios.post("http://localhost:3001/items", {name, price: parseFloat(price), quant
                 <input type="text" value={name} onChange={event => setName(event.target.value)}></input>
                 <br />
                 <label>Price:</label>
-                <input type="number" min="0.00" step="0.01" value={Number(price).toFixed(2)} onChange={event => setPrice(event.target.value)} ></input>
+                <input type="number" min="0.00" step="0.01" value={price} onChange={event => setPrice(event.target.value)} ></input>
                 <br />
                 <input type="number" min="0" placeholder="Please enter quantity" value={quantity} onChange={event => setQuantity(event.target.value)}></input>
                 <br />
