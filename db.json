@@ -23,6 +23,12 @@
       "name": "Item5",
       "price": 23,
       "quantity": "2"
+    },
+    {
+      "id": "b94b",
+      "name": "werwe",
+      "price": 6,
+      "quantity": "123"
     }
   ],
   "cart": []
