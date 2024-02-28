@@ -11,6 +11,18 @@
       "name": "sd",
       "price": "1.00",
       "quantity": "2"
+    },
+    {
+      "id": "2c17",
+      "name": "Shirt",
+      "price": "30.00",
+      "quantity": "3000"
+    },
+    {
+      "id": "85a5",
+      "name": "Pants",
+      "price": "12.99",
+      "quantity": "2"
     }
   ],
   "cart": []
