@@ -4,7 +4,7 @@
       "name": "Cardigan",
       "price": "35.00",
       "quantity": "50",
-      "id": 2
+      "id": "2"
     },
     {
       "name": "Jeans",
@@ -31,5 +31,5 @@
       "id": 6
     }
   ],
-  "Cart": []
+  "cart": []
 }

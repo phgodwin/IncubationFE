@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Items from './components/Items';
-import Cart from './components/Cart';
+import Items from './components/items/Items';
+import Cart from './components/cart/Cart';
 import Home from './components/Home';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
