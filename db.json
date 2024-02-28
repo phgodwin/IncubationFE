@@ -23,6 +23,12 @@
       "price": "30",
       "quantity": "73",
       "id": 5
+    },
+    {
+      "name": "Backpack",
+      "price": 25.45,
+      "quantity": "50",
+      "id": 6
     }
   ],
   "Cart": []
