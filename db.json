@@ -4,26 +4,26 @@
       "name": "Cardigan",
       "price": "35.00",
       "quantity": "50",
-      "id": 2
+      "id": "2"
     },
     {
-      "name": "Jeans",
-      "price": "25.99",
-      "quantity": "45",
-      "id": 3
+      "id": "12e5",
+      "name": "Item5",
+      "price": "24",
+      "quantity": "140"
     },
     {
-      "name": "Shirt",
-      "price": "21",
-      "quantity": "60",
-      "id": 4
+      "id": "c363",
+      "name": "Item5",
+      "price": 20,
+      "quantity": "123"
     },
     {
-      "name": "Jumper",
-      "price": "30",
-      "quantity": "73",
-      "id": 5
+      "id": "7bc4",
+      "name": "Item5",
+      "price": 23,
+      "quantity": "2"
     }
   ],
-  "Cart": []
+  "cart": []
 }
