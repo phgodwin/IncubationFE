@@ -9,24 +9,25 @@ function CreateItem() {
     const [quantity, setQuantity] = useState("");
 
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-
-
-axios.post("http://localhost:3001/items", {name, price: parseFloat(price), quantity})
-
-.then(response =>
-    {
-        setName("");
-        setPrice("");
-        setQuantity("");
-    } )
-    .catch(error => console.error(error))
-
-
-
-    }
-
+      
+        // update
+        const formattedPrice = parseFloat(price).toFixed(2);
+      
+        axios
+          .post("http://localhost:3001/items", {
+            name,
+            price: formattedPrice, // update
+            quantity,
+          })
+          .then((response) => {
+            setName("");
+            setPrice("");
+            setQuantity("");
+          })
+          .catch((error) => console.error(error));
+      };
 
 
 
@@ -38,7 +39,7 @@ axios.post("http://localhost:3001/items", {name, price: parseFloat(price), quant
                 <input type="text" value={name} onChange={event => setName(event.target.value)}></input>
                 <br />
                 <label>Price:</label>
-                <input type="number" min="0.00" step="0.01" value={Number(price).toFixed(2)} onChange={event => setPrice(event.target.value)} ></input>
+                <input type="number" defaultValue="0.00" min="0" step="0.01" value={price} onChange={event => setPrice(event.target.value)} ></input>
                 <br />
                 <input type="number" min="0" placeholder="Please enter quantity" value={quantity} onChange={event => setQuantity(event.target.value)}></input>
                 <br />

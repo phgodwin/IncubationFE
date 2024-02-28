@@ -7,28 +7,10 @@
       "id": "2"
     },
     {
-      "id": "12e5",
-      "name": "Item5",
-      "price": "24",
-      "quantity": "140"
-    },
-    {
-      "id": "c363",
-      "name": "Item5",
-      "price": 20,
-      "quantity": "123"
-    },
-    {
-      "id": "7bc4",
-      "name": "Item5",
-      "price": 23,
+      "id": "ef04",
+      "name": "sd",
+      "price": "1.00",
       "quantity": "2"
-    },
-    {
-      "id": "b94b",
-      "name": "werwe",
-      "price": 6,
-      "quantity": "123"
     }
   ],
   "cart": []

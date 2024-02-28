@@ -12,7 +12,7 @@ function ItemsPT(props) {
     return (  
         <Card>
         <p>{props.Name}</p>
-        <p>{props.Price}</p>
+        <p>{props.Price.toFixed(2)}</p>
         <p>{props.Quantity}</p>
         </Card>
            
