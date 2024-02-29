@@ -13,7 +13,7 @@ function App() {
 
     <Router>
 
-        <Navbar expand="lg" className="bg-light">
+        <Navbar expand="lg" className="bg-light"className="navbar">
         <Container>
 
             <Navbar.Brand href="/" >
