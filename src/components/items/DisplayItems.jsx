@@ -19,11 +19,17 @@ function DisplayItems() {
         for (const item of items) {
             itemArray.push(
                 <  ItemsPT
-                    Name={item.name}
-                    Price={item.price}
-                    Quantity={item.quantity}
-
+                Name={item.name}
+                Price={item.price}
+                Quantity={item.quantity}
+            >
+                <img
+                    src={item.uploadImages}
+                    className="Property-images"
+                    alt="propertyImage"
                 />
+                        </ItemsPT>
+
 
             )
         

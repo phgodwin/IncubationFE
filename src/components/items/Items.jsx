@@ -4,7 +4,7 @@ import DisplayItems from "./DisplayItems";
 function Items() {
     return (
         <div>
-            <h1>These are our Items!</h1>
+            <h1>Add your Items</h1>
             <CreateItem />
             <DisplayItems />
 

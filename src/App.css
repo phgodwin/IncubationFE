@@ -35,4 +35,14 @@
   to {
     transform: rotate(360deg);
   }
+
 }
+form { 
+ 
+  background: rgba(39, 169, 71, 0.252); 
+ 
+  padding: 1.5em; 
+ 
+  border-radius: 1em; width: 20%; 
+ 
+ }

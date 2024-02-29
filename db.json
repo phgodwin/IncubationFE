@@ -7,28 +7,11 @@
       "id": "2"
     },
     {
-      "name": "Jeans",
-      "price": "25.99",
-      "quantity": "45",
-      "id": 3
-    },
-    {
-      "name": "Shirt",
-      "price": "21",
-      "quantity": "60",
-      "id": 4
-    },
-    {
-      "name": "Jumper",
-      "price": "30",
-      "quantity": "73",
-      "id": 5
-    },
-    {
-      "name": "Backpack",
-      "price": 25.45,
-      "quantity": "50",
-      "id": 6
+      "id": "8744",
+      "name": "Test",
+      "price": "15.00",
+      "quantity": "10000",
+      "uploadImages": "https://i.postimg.cc/c4hXLkqn/shoehouse.jpg"
     }
   ],
   "cart": []
