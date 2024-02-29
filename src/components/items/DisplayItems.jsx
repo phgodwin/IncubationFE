@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
+import { FaShoppingCart } from "react-icons/fa";
+import Button from 'react-bootstrap/Button';
 
 function DisplayItems() {
   const [items, setItems] = useState([]);
@@ -16,11 +18,16 @@ function DisplayItems() {
 
   return (
     <div className="container">
-      {/* <h2>A list of Items</h2> */}
       {items.map(item => (
-        <Card key={item.id} className="col-sm-6 col-md-4 col-lg-3 m-4">
-          <img src={item.uploadImages} className="Item-images" alt="itemImage" />
-          {item.name} {item.price} {item.quantity}
+        <Card key={item.id} 
+        className="col-sm-6 col-md-4 col-lg-3 m-4"
+        style={{textAlign:"center"}}>
+          <img src={item.uploadImages} className="item-images" alt="itemImage" />
+
+          <h4>{item.name}</h4> 
+          <h6> £ {item.price}</h6> 
+          Items left: {item.quantity}
+          <Button variant="warning" > <FaShoppingCart /></Button>
         </Card>
       ))}
     </div>

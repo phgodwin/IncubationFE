@@ -58,3 +58,7 @@ form {
 .navbar-inner {
   background-color:transparent;
 }
+.item-images {
+  width: 100%; 
+  height: 100%; 
+}
