@@ -39,10 +39,12 @@
 }
 form { 
  
-  background: rgba(39, 169, 71, 0.252); 
+  background: #1f3b4d; 
  
   padding: 1.5em; 
  
   border-radius: 1em; width: 20%; 
+  
+  color: aliceblue;
  
  }
