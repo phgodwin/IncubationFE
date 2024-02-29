@@ -48,3 +48,24 @@ form {
   color: aliceblue;
  
  }
+
+ .container {
+
+  max-width: 860px;
+
+  margin: 10 auto;
+
+}
+.card {
+
+  background-color: antiquewhite;
+
+  border-radius: px;
+
+  padding: 10px 20px 30px;
+
+  margin-top: 50px;
+
+  display: flex;
+
+}
