@@ -1,15 +1,15 @@
-import PAISTINA from "./pictures/PAISTINA.png"
+import homeBackground from "./pictures/homeBackground.png"
 
 function Home() {
     return ( 
-        <h1>Home</h1>,
-        <div >
+        <div>
               <img
-                src={PAISTINA}
-                alt="RS"
+                src={homeBackground}
+                alt="HomeBackground"
                 width="100%"
-                height="15%"
-                className="d-inline-block align-text-middle"/>
+                height="100%"
+                
+            />
             
         
             </div>
