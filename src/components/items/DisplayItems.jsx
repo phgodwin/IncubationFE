@@ -8,7 +8,6 @@ import Logo from "./Logo.png"
 
 function DisplayItems() {
   const [items, setItems] = useState([]);
-    const [cartItems, setCartItems] = useState([]);
 
 
   useEffect(() => {
@@ -37,7 +36,7 @@ function DisplayItems() {
           Items left: {item.quantity}
           <br />
           <br />
-          
+
 
           <Button variant="danger" > <strong><MdOutlineShoppingCart />  Add to basket </strong> </Button>
         </Card>
