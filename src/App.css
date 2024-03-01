@@ -59,15 +59,10 @@ form {
  }
 
  .container {
-<<<<<<< HEAD
 
   display: flex;
   flex-wrap: wrap; /* This ensures that cards wrap to the next row when necessary */
 
-=======
-  display: flex;
-  flex-wrap: wrap; /* This ensures that cards wrap to the next row when necessary */
->>>>>>> aae11093153823602ab6035e434bf1641e2e0deb
 }
 
 .navbar-inner {
