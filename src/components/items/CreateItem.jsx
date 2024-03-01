@@ -8,7 +8,7 @@ function CreateItem() {
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [uploadImages, setUploadImages] = useState("");
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
 
   const handleSubmit = (event) => {
@@ -39,7 +39,7 @@ function CreateItem() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h3>Add your Items</h3>
+        <h3>Create your Items</h3>
 
         <input type="text" className="form-control" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}></input>
         <br />

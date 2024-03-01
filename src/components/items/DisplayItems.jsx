@@ -38,7 +38,7 @@ function DisplayItems() {
           <br />
 
 
-          <Button variant="danger" > <strong><MdOutlineShoppingCart />  Add to basket </strong> </Button>
+          {/* <Button variant="danger" > <strong><MdOutlineShoppingCart />  Add to basket </strong> </Button> */}
         </Card>
       ))}
     </div>
