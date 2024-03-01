@@ -1,11 +1,12 @@
 import './App.css';
-import Items from './components/items/Items';
 import Cart from './components/cart/Cart';
 import Home from './components/Home';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Logo from './Logo.png'
 import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
+import AddStockPage from './components/items/AddStockPage';
+import AvailableStockPage from './components/items/AvailableStockPage';
 
 
 function App() {
@@ -33,7 +34,13 @@ function App() {
             <Nav
               className="me-auto"
             >
-              <Nav.Link href="/Items"><strong>Create Items</strong></Nav.Link>
+              <Nav.Link href="/AddStock"><strong>Add Stock</strong></Nav.Link>
+              </Nav>
+
+              <Nav
+              className="me-auto"
+            >
+              <Nav.Link href="/Stock"><strong>Shop</strong></Nav.Link>
               </Nav>
               
               <Nav>
@@ -48,7 +55,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/Items' element={<Items />}></Route>
+        <Route path='/AddStock' element={<AddStockPage/>}></Route>
+        <Route path='/Stock' element={<AvailableStockPage />}></Route>
         <Route path='/Cart' element={<Cart />}></Route>
       </Routes>
     </Router>

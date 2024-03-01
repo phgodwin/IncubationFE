@@ -1,7 +1,7 @@
 import CreateItem from "./CreateItem";
 import DisplayItems from "./DisplayItems";
 
-function Items() {
+function AddStockPage() {
     return (
         <div>
             <CreateItem />
@@ -12,4 +12,4 @@ function Items() {
         );
 }
 
-export default Items;
+export default AddStockPage;
