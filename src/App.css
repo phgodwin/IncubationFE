@@ -38,25 +38,56 @@
   }
 
 }
+
+.cart-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
 form { 
  
   background: #1f3b4d; 
  
   padding: 1.5em; 
  
-  border-radius: 1em; width: 20%; 
+  border-radius: 2em; width: 50%; 
   
-  color: aliceblue;
+  color: white;
+  margin:auto
  
  }
 
  .container {
+<<<<<<< HEAD
 
   display: flex;
   flex-wrap: wrap; /* This ensures that cards wrap to the next row when necessary */
 
+=======
+  display: flex;
+  flex-wrap: wrap; /* This ensures that cards wrap to the next row when necessary */
+>>>>>>> aae11093153823602ab6035e434bf1641e2e0deb
 }
 
 .navbar-inner {
   background-color:transparent;
+}
+.item-images {
+  width: 100%; 
+  height: 100%; 
+  object-fit: fill;
+
+}
+.card {
+
+
+  border-radius: px;
+
+  padding: 10px 20px 30px;
+
+  margin-top: 50px;
+
+  display: flex;
+
 }

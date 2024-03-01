@@ -16,7 +16,7 @@ function App() {
         <Navbar expand="lg" className="bg-light"className="navbar">
         <Container>
 
-            <Navbar.Brand href="/" >
+            {/* <Navbar.Brand href="/" >
               <img
                 alt="Logo Icon"
                 src={Logo}
@@ -24,26 +24,20 @@ function App() {
                 height="15%"
                 className="d-inline-block align-top"
               />
-            </Navbar.Brand>
+            </Navbar.Brand> */}
             <Nav
               className="me-auto"
             >
-              <Nav.Link href="/Items">Create Items</Nav.Link>
+              <Nav.Link href="/"><strong>Home</strong></Nav.Link>
               </Nav>
-              {/* <Nav className='mx-auto'>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search Items"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-              </Nav> */}
+            <Nav
+              className="me-auto"
+            >
+              <Nav.Link href="/Items"><strong>Create Items</strong></Nav.Link>
+              </Nav>
+              
               <Nav>
-              <Nav.Link href="/Cart" >My Cart <FaShoppingCart />
- </Nav.Link >
+              <Nav.Link href="/Cart" ><strong><FaShoppingCart /> </strong></Nav.Link >
             </Nav>
 
             </Container>

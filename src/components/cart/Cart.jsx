@@ -1,5 +1,15 @@
+import React from "react";
+import { IoBagHandleOutline } from "react-icons/io5";
+
 function Cart() {
-    return ( <h1>Welcome to your cart!</h1> );
+  return (
+    <div className="cart-container">
+      <h2>
+        <IoBagHandleOutline />
+         My Cart
+      </h2>
+    </div>
+  );
 }
 
 export default Cart;
