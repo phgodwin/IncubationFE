@@ -52,9 +52,8 @@ form {
 
  .container {
 
-  max-width: 860px;
-
-  margin: 10 auto;
+  display: flex;
+  flex-wrap: wrap; /* This ensures that cards wrap to the next row when necessary */
 
 }
 
