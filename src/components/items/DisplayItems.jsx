@@ -11,10 +11,10 @@ function DisplayItems() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:8081/item")
+    axios.get("http://localhost:8081/item/get")
       .then(response => {
         setItems(response.data);
-        console.log("http://localhost:8081/item", response);
+        console.log("http://localhost:8081/item/get", response);
       })
       .catch(err => console.error(err));
   }, []);

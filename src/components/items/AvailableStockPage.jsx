@@ -9,28 +9,39 @@ function AvailableStockPage() {
   // State for storing items and search value
   const [items, setItems] = useState([]);
   const [filterItemName, setFilterItemName] = useState("");
-  
+  const [cart, setCart] = useState("");
 
 
   // Fetch items from the server on component 
   useEffect(() => {
-    axios.get("http://localhost:8081/item")
+    axios.get("http://localhost:8081/item/get")
       .then(response => {
         setItems(response.data);
-        console.log("http://localhost:8081/item", response);
+        console.log("http://localhost:8081/item/get", response);
       })
       .catch(err => console.error(err));
   }, []);
 
+
+
   // Filter items based on search value
-  useEffect(() => {
-    const filteredItems = items.filter(item =>
-      item.name.toLowerCase().includes(filterItemName.toLowerCase())
-    );
-    setItems(filteredItems);
-  }, [filterItemName]);
+  // useEffect(() => {
+  //   const filteredItems = items.filter(item =>
+  //     item.name.toLowerCase().includes(filterItemName.toLowerCase())
+  //   );
+  //   setItems(filteredItems);
+  // }, [filterItemName]);
 
+// add to cart button logic
+function AddToCart(){
+  axios.patch("http://localhost:8081/item/update" +  {cart})
+.then(response => {})
+  
 
+.catch(err => console.error(err))
+
+setCart(1);
+};
 
   return (
     
@@ -56,7 +67,7 @@ function AvailableStockPage() {
           <br />
           <h4>{item.name}</h4>
           <h6>£ {item.price}</h6>
-          <Button variant="danger">
+          <Button variant="danger" onClick={AddToCart()} >
             <strong><MdOutlineShoppingCart /> Add to basket</strong>
           </Button>
         </Card>

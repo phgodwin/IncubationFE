@@ -17,7 +17,7 @@ function CreateItem() {
     const formattedPrice = parseFloat(price).toFixed(2);
 
     axios
-      .post("http://localhost:8081/item", {
+      .post("http://localhost:8081/item/create", {
         name,
         price: formattedPrice, // update
         quantity,
