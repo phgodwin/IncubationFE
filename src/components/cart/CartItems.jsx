@@ -46,8 +46,9 @@ function CartItems() {
   )
  }
 
-    return (
+    return (<div>
         {cartItems}
+        </div>
       );
     }
 

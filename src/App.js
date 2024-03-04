@@ -29,22 +29,22 @@ function App() {
             <Nav
               className="me-auto"
             >
-              <Nav.Link href="/"><strong>Home</strong></Nav.Link>
+              <Link to="/"><strong>Home</strong></Link>
               </Nav>
             <Nav
               className="me-auto"
             >
-              <Nav.Link href="/AddStock"><strong>Add Stock</strong></Nav.Link>
+              <Link to="/AddStock"><strong>Add</strong></Link>
               </Nav>
 
               <Nav
               className="me-auto"
             >
-              <Nav.Link href="/Stock"><strong>Shop</strong></Nav.Link>
+              <Link to="/Stock"><strong>Shop</strong></Link>
               </Nav>
               
               <Nav>
-              <Nav.Link href="/Cart" ><strong><FaShoppingCart /> </strong></Nav.Link >
+              <Link to="/Cart" ><strong><FaShoppingCart /> </strong></Link >
             </Nav>
 
             </Container>

@@ -9,7 +9,7 @@ function AvailableStockPage() {
   // State for storing items and search value
   const [items, setItems] = useState([]);
   const [filterItemName, setFilterItemName] = useState("");
-  const [cart, setCart] = useState("");
+  const [cart, setCart] = useState(1);
 
 
   // Fetch items from the server on component 
@@ -32,27 +32,26 @@ function AvailableStockPage() {
   //   setItems(filteredItems);
   // }, [filterItemName]);
 
-// add to cart button logic
-function AddToCart(){
-  axios.patch("http://localhost:8081/item/update" +  {cart})
-.then(response => {})
-  
+  // add to cart button logic
+  function AddToCart(id) {
+    axios.patch("http://localhost:8081/item/update/" + id, { cart: { id: cart } })
 
-.catch(err => console.error(err))
+      .then(response => {
+      })
 
-setCart(1);
-};
+      .catch(err => console.error(err))
+  };
 
   return (
-    
+
     <div className="container">
-    <input
-    type="text"
-    onChange={e => setFilterItemName(e.target.value)}
-    value={filterItemName}
-    placeholder="Search Items"
-    className="form-control" 
-  />
+      <input
+        type="text"
+        onChange={e => setFilterItemName(e.target.value)}
+        value={filterItemName}
+        placeholder="Search Items"
+        className="form-control"
+      />
 
       {items.map(item => (
         <Card
@@ -67,7 +66,7 @@ setCart(1);
           <br />
           <h4>{item.name}</h4>
           <h6>£ {item.price}</h6>
-          <Button variant="danger" onClick={AddToCart()} >
+          <Button variant="danger" onClick={()=> AddToCart(item.id)} >
             <strong><MdOutlineShoppingCart /> Add to basket</strong>
           </Button>
         </Card>
