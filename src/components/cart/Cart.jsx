@@ -1,5 +1,6 @@
 import React from "react";
 import { IoBagHandleOutline } from "react-icons/io5";
+import CartItems from "./CartItems";
 
 function Cart() {
   return (
@@ -7,6 +8,7 @@ function Cart() {
       <h2>
         <IoBagHandleOutline />
          My Cart
+         <CartItems />
       </h2>
     </div>
   );

@@ -5,7 +5,8 @@
       "name": "Tent Vango",
       "price": "240.00",
       "quantity": "300",
-      "uploadImages": "https://media.4rgos.it/i/Argos/9575189_R_Z001A?w=1500&h=880&qlt=70&fmt=webp"
+      "uploadImages": "https://media.4rgos.it/i/Argos/9575189_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+      "cart": { "id": 1}
     },
     {
       "id": "6741",

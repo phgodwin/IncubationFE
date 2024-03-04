@@ -8,9 +8,8 @@ function CreateItem() {
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [uploadImages, setUploadImages] = useState("");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-
-
+                     
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -18,7 +17,7 @@ function CreateItem() {
     const formattedPrice = parseFloat(price).toFixed(2);
 
     axios
-      .post("http://localhost:3001/items", {
+      .post("http://localhost:8081/item", {
         name,
         price: formattedPrice, // update
         quantity,

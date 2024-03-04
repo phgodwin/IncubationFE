@@ -11,14 +11,15 @@ function DisplayItems() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3001/items")
+    axios.get("http://localhost:8081/item")
       .then(response => {
         setItems(response.data);
-        console.log("http://localhost:3001/items", response);
+        console.log("http://localhost:8081/item", response);
       })
       .catch(err => console.error(err));
   }, []);
 
+  
   return (
     <div className="container">
       {items.map(item => (
