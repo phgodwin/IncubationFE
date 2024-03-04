@@ -8,12 +8,15 @@ import { FaShoppingCart } from "react-icons/fa";
 import AddStockPage from './components/items/AddStockPage';
 import AvailableStockPage from './components/items/AvailableStockPage';
 
-
+//Main entry point to the react app
 function App() {
   return (
 
-    <Router>
+// wraps the entire app, enabling client-side routing. 
 
+    <Router>
+    {/* Inside the router, there’s a navigation bar (<Navbar>)
+ with links to different pages. */}
         <Navbar expand="lg" className="bg-light"className="navbar">
         <Container>
 
@@ -29,6 +32,8 @@ function App() {
             <Nav
               className="me-auto"
             >
+              {/* The navigation links (<Nav.Link>) point to different routes: /, /AddStock, /Stock, and /Cart.
+ */}
               <Nav.Link href="/"><strong>Home</strong></Nav.Link>
               </Nav>
             <Nav
@@ -52,7 +57,8 @@ function App() {
         </Navbar>
 
         
-
+{/* The <Routes> component defines the routes for different pages.
+ */}
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/AddStock' element={<AddStockPage/>}></Route>
