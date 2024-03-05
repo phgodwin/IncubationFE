@@ -7,6 +7,7 @@ import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
 import AddStockPage from './components/items/AddStockPage';
 import AvailableStockPage from './components/items/AvailableStockPage';
+import EditItem from './components/items/EditItem';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         <Route path='/AddStock' element={<AddStockPage/>}></Route>
         <Route path='/Stock' element={<AvailableStockPage />}></Route>
         <Route path='/Cart' element={<Cart />}></Route>
+        <Route path='/edit/:id' element={<EditItem />} />
       </Routes>
     </Router>
 

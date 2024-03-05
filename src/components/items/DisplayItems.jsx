@@ -4,11 +4,12 @@ import Card from "react-bootstrap/Card";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Button from 'react-bootstrap/Button';
 import Logo from "./Logo.png"
+import { useNavigate } from 'react-router-dom';
 
 
 function DisplayItems() {
   const [items, setItems] = useState([]);
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("http://localhost:8081/item/get")
@@ -38,8 +39,8 @@ function DisplayItems() {
           <br />
           <br />
 
-
-          {/* <Button variant="danger" > <strong><MdOutlineShoppingCart />  Add to basket </strong> </Button> */}
+<button onClick={()=>navigate("/edit/" + item.id)}>Edit Item</button>
+          
         </Card>
       ))}
     </div>
