@@ -19,7 +19,6 @@ function CartItems() {
   useEffect(() => getCart(), []);
 
 
-
   const cartItems = [];
   let totalPrice = 0;
 
