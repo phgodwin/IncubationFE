@@ -29,7 +29,7 @@ function DisplayItems() {
             <div style={{ position: "absolute", top: 10, right: 10, transform: "scale(2)" }}>
         <img src={Logo} alt="Watermark" style={{ opacity: 0.65, width: 50 }} />
       </div>
-          <img src={item.uploadImages} className="item-images" alt="itemImage" />
+          <img src={item.image} className="item-images" alt="itemImage" />
           
           <br />
           <h4>{item.name}</h4>

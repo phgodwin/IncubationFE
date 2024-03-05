@@ -7,7 +7,7 @@ function CreateItem() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [uploadImages, setUploadImages] = useState("");
+  const [image, setImage] = useState("");
                      
   
   const handleSubmit = (event) => {
@@ -21,13 +21,13 @@ function CreateItem() {
         name,
         price: formattedPrice, // update
         quantity,
-        uploadImages
+        image
       })
       .then((response) => {
         setName("");
         setPrice("");
         setQuantity("");
-        setUploadImages("");
+        setImage("");
 
       })
       .catch((error) => console.error(error));
@@ -52,8 +52,8 @@ function CreateItem() {
           className="form-control"
           type="text"
           placeholder="Paste your URL here"
-          value={uploadImages}
-          onChange={e => setUploadImages(e.target.value)}
+          value={image}
+          onChange={e => setImage(e.target.value)}
 
         />
         <br />
