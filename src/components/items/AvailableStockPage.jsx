@@ -13,14 +13,17 @@ function AvailableStockPage() {
 
 
   // Fetch items from the server on component 
-  useEffect(() => {
+
+  function getItems() {
     axios.get("http://localhost:8081/item/get")
       .then(response => {
         setItems(response.data);
         console.log("http://localhost:8081/item/get", response);
       })
       .catch(err => console.error(err));
-  }, []);
+  }
+  useEffect(() => getItems()
+      , []);
 
 
 
@@ -37,7 +40,7 @@ function AvailableStockPage() {
     axios.patch("http://localhost:8081/item/update/" + id, { cart: { id: cart } })
 
       .then(response => {
-      })
+              })
 
       .catch(err => console.error(err))
   };
