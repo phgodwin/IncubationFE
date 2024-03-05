@@ -12,14 +12,17 @@ function CartItems() {
   const [cartId, setCartId] = useState(null);
 
 
-  useEffect(() => {
+
+
+  function getCart(){
     axios.get("http://localhost:8081/cart/get/1")
       .then(response => {
         setCart(response.data.items);
         console.log("http://localhost:8081/cart/get/1", response);
-      })
+  })
       .catch(err => console.error(err));
-  }, []);
+      }
+  useEffect(() => getCart(), []);
 
   
   const cartItems = [];
@@ -51,7 +54,10 @@ function CartItems() {
 
       axios.patch("http://localhost:8081/item/updateCartItem/" + id)
       .then(response => {
-      })
+        getCart();
+      }
+      
+      )
     
       .catch(err => console.error(err))
     };
