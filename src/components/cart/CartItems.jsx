@@ -12,16 +12,6 @@ function CartItems() {
   const [cartId, setCartId] = useState(null);
 
 
-function RemoveFromCart(id){
-
-  axios.patch("http://localhost:8081/item/update/" + params.id, {cart:{id: cartId} })
-  .then(response => {
-  })
-
-  .catch(err => console.error(err))
-};
-
-
   useEffect(() => {
     axios.get("http://localhost:8081/cart/get/1")
       .then(response => {
@@ -56,6 +46,15 @@ function RemoveFromCart(id){
         {/* <Button variant="danger" > <strong><MdOutlineShoppingCart />  Add to basket </strong> </Button> */}
       </div>
     )
+
+    function RemoveFromCart(id){
+
+      axios.patch("http://localhost:8081/item/updateCartItem/" + id)
+      .then(response => {
+      })
+    
+      .catch(err => console.error(err))
+    };
   }
 
   return (<div>
