@@ -1,35 +1,32 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import Logo from "../items/Logo.png"
-import { useParams } from "react-router";
 
 
 function CartItems() {
 
   const [cart, setCart] = useState("");
-  const params = useParams();
-  const [cartId, setCartId] = useState(null);
+ 
 
-
-
-
-  function getCart(){
+  function getCart() {
     axios.get("http://localhost:8081/cart/get/1")
       .then(response => {
         setCart(response.data.items);
         console.log("http://localhost:8081/cart/get/1", response);
-  })
+      })
       .catch(err => console.error(err));
-      }
+  }
   useEffect(() => getCart(), []);
 
-  
+
+
   const cartItems = [];
+  let totalPrice = 0;
 
   for (const cItem of cart) {
 
-
+    totalPrice=totalPrice+cItem.price;
+   
     cartItems.push(
       <div>
 
@@ -37,12 +34,11 @@ function CartItems() {
           <img src={Logo} alt="Watermark" style={{ opacity: 0.65, width: 50 }} />
         </div>
         <img src={cItem.image} className="item-images" alt="itemImage" />
-
         <br />
         <h4>{cItem.name}</h4>
         <h6> £ {cItem.price}</h6>
         <br />
-<button onClick={()=>RemoveFromCart(cItem.id)}>Remove From Cart</button>
+        <button onClick={() => RemoveFromCart(cItem.id)}>Remove From Cart</button>
         <br />
 
 
@@ -50,20 +46,21 @@ function CartItems() {
       </div>
     )
 
-    function RemoveFromCart(id){
+
+
+    function RemoveFromCart(id) {
 
       axios.patch("http://localhost:8081/item/updateCartItem/" + id)
-      .then(response => {
-        getCart();
-      }
-      
-      )
-    
-      .catch(err => console.error(err))
+        .then(response => {
+          getCart();
+        })
+
+        .catch(err => console.error(err))
     };
   }
 
   return (<div>
+    <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
     {cartItems}
   </div>
   );
