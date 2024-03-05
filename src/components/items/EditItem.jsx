@@ -27,7 +27,6 @@ function EditItem() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // patch request needs to go here
 
         axios.patch("http://localhost:8081/item/update/" + params.id, { name, price, quantity, image })
             .then(() => {
