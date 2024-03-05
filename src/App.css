@@ -47,13 +47,13 @@
 
 form { 
  
-  background: #1f3b4d; 
+  background: #254144; 
  
   padding: 1.5em; 
  
   border-radius: 2em; width: 50%; 
   
-  color: white;
+  color: #f7e1bf;
   margin:auto
  
  }
@@ -67,6 +67,7 @@ form {
 
 .navbar-inner {
   background-color:transparent;
+  
 }
 .item-images {
   width: 100%; 
@@ -85,4 +86,32 @@ form {
 
   display: flex;
 
+}
+.my-button {
+  background-color: #687670;
+  color: #f7e1bf;
+
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+
+}
+.my-button:hover {
+  background-color: #f7e1bf;
+  color: #687670;
+  cursor: pointer;
+}
+.my-button-create {
+  background-color: #687670;
+  color: #f7e1bf;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+
+
+}
+.my-button-create:hover {
+  background-color: #f7e1bf;
+  color: #687670;
+  cursor: pointer;
 }

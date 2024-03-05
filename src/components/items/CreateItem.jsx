@@ -38,7 +38,7 @@ function CreateItem() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h3>Create your Items</h3>
+        <h3>CREATE YOUR ITEMS</h3>
 
         <input type="text" className="form-control" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}></input>
         <br />
@@ -57,8 +57,8 @@ function CreateItem() {
 
         />
         <br />
-        <button type="submit" className="btn btn-success btn-md" style={{ backgroundColor: "#1C2938", borderColor: "white", color: "white" }}
->Create!</button>
+        <button  class="my-button-create">
+<strong>CREATE</strong></button>
 
       </form>
 

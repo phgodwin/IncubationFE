@@ -28,23 +28,17 @@ function CartItems() {
 
 
     cartItems.push(
-      <div>
-
-        <div style={{ position: "absolute", top: 10, right: 10, transform: "scale(2)" }}>
-          <img src={Logo} alt="Watermark" style={{ opacity: 0.65, width: 50 }} />
-        </div>
-        <img src={cItem.image} className="item-images" alt="itemImage" />
-
-        <br />
-        <h4>{cItem.name}</h4>
-        <h6> £ {cItem.price}</h6>
-        <br />
-<button onClick={()=>RemoveFromCart(cItem.id)}>Remove From Cart</button>
-        <br />
-
-
-        {/* <Button variant="danger" > <strong><MdOutlineShoppingCart />  Add to basket </strong> </Button> */}
+      <Card><div style={{ display: 'flex', alignItems: 'center', padding: '1rem', maxWidth: '200px' }}>
+      <img src={cItem.image} className="item-images" alt="itemImage" style={{ flex: 1 }} />
+      <div style={{ flex: 2, marginLeft: '1rem' }}>
+        <h6>{cItem.name}</h6>
+        <h4>£ {cItem.price}</h4>
+        <button className="my-button-create" onClick={() => RemoveFromCart(cItem.id)}>
+X        </button>
       </div>
+    </div>
+    </Card>
+
     )
 
     function RemoveFromCart(id){
@@ -57,9 +51,9 @@ function CartItems() {
     };
   }
 
-  return (<div>
+  return (  <div>
     {cartItems}
-  </div>
+    </div>
   );
 }
 

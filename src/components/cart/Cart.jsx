@@ -4,7 +4,7 @@ import CartItems from "./CartItems";
 
 function Cart() {
   return (
-    <div className="cart-container">
+    <div className="cart-container" >
       <h2>
         <IoBagHandleOutline />
          My Cart

@@ -66,9 +66,9 @@ function AvailableStockPage() {
           <br />
           <h4>{item.name}</h4>
           <h6>£ {item.price}</h6>
-          <Button variant="danger" onClick={()=> AddToCart(item.id)} >
-            <strong><MdOutlineShoppingCart /> Add to basket</strong>
-          </Button>
+          <button  class="my-button" onClick={()=> AddToCart(item.id)} >
+            <strong><MdOutlineShoppingCart size={25} /> ADD TO CART</strong>
+          </button>
         </Card>
       ))}
     </div>

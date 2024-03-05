@@ -39,7 +39,7 @@ function DisplayItems() {
           <br />
           <br />
 
-<button onClick={()=>navigate("/edit/" + item.id)}>Edit Item</button>
+<button  class="my-button"  onClick={()=>navigate("/edit/" + item.id)} ><strong>EDIT ITEM</strong> </button>
           
         </Card>
       ))}

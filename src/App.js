@@ -1,68 +1,69 @@
-import './App.css';
-import Cart from './components/cart/Cart';
-import Home from './components/Home';
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Logo from './Logo.png'
-import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
+import "./App.css";
+import Cart from "./components/cart/Cart";
+import Home from "./components/Home";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
-import AddStockPage from './components/items/AddStockPage';
-import AvailableStockPage from './components/items/AvailableStockPage';
-import EditItem from './components/items/EditItem';
-
+import AddStockPage from "./components/items/AddStockPage";
+import AvailableStockPage from "./components/items/AvailableStockPage";
+import EditItem from "./components/items/EditItem";
+import mountain from "./mountain.png";
 
 function App() {
   return (
-
     <Router>
-
-        <Navbar expand="lg" className="bg-light"className="navbar">
+      <Navbar bg="light" data-bs-theme="dark">
         <Container>
-
-            {/* <Navbar.Brand href="/" >
+          <Nav className="float-left">
+            <Link
+              className="nav-link"
+              to="/"
+              style={{ textDecoration: "none", color: "#254144" }}
+            >
               <img
-                alt="Logo Icon"
-                src={Logo}
-                width="15%"
-                height="15%"
-                className="d-inline-block align-top"
+                src={mountain}
+                alt="Home"
+                style={{ width: "30px", height: "30px" }}
               />
-            </Navbar.Brand> */}
-            <Nav
-              className="me-auto"
-            >
-              <Link to="/"><strong>Home</strong></Link>
-              </Nav>
-            <Nav
-              className="me-auto"
-            >
-              <Link to="/AddStock"><strong>Add</strong></Link>
-              </Nav>
-
-              <Nav
-              className="me-auto"
-            >
-              <Link to="/Stock"><strong>Shop</strong></Link>
-              </Nav>
-              
-              <Nav>
-              <Link to="/Cart" ><strong><FaShoppingCart /> </strong></Link >
+            </Link>
             </Nav>
+            <Nav className="float-left">
 
-            </Container>
+            <Link
+              className="nav-link"
+              to="/AddStock"
+              style={{ textDecoration: "none", color: "#254144" }}
+            >
+              <strong>ADD</strong>
+            </Link>
 
-        </Navbar>
+            <Link
+              className="nav-link"
+              to="/Stock"
+              style={{ textDecoration: "none", color:'#254144' }}
+            >
+              <strong>SHOP</strong>
+            </Link>
+          </Nav>
 
-        
+          <Nav className="float-rigth">
+            <Link className="nav-link" to="/Cart" style={{ color: "#254144" }}>
+              <strong>
+                <FaShoppingCart size={25}/>
+              </strong>
+            </Link>
+          </Nav>
+        </Container>
+      </Navbar>
 
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/AddStock' element={<AddStockPage/>}></Route>
-        <Route path='/Stock' element={<AvailableStockPage />}></Route>
-        <Route path='/Cart' element={<Cart />}></Route>
-        <Route path='/edit/:id' element={<EditItem />} />
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/AddStock" element={<AddStockPage />}></Route>
+        <Route path="/Stock" element={<AvailableStockPage />}></Route>
+        <Route path="/Cart" element={<Cart />}></Route>
+        <Route path="/edit/:id" element={<EditItem />} />
       </Routes>
     </Router>
-
   );
 }
 
