@@ -11,28 +11,42 @@ function AvailableStockPage() {
   const [items, setItems] = useState([]);
   // filterItemName: A string to store the search value for filtering items.
   const [filterItemName, setFilterItemName] = useState("");
-  
+// This initializes a state variable called cart with an initial value of 1. It likely represents the cart ID.
+  const [cart, setCart] = useState(1);
+
 
 // The component fetches items from the server using an 
 // HTTP GET request when it mounts (using the useEffect hook with an empty dependency array).
   useEffect(() => {
-    axios.get("http://localhost:3001/items")
+    axios.get("http://localhost:8081/item/get")
       .then(response => {
         setItems(response.data);
-        console.log("http://localhost:3001/items", response);
+        console.log("http://localhost:8081/item/get", response);
       })
       .catch(err => console.error(err));
   }, []);
 
 // It also filters items based on the search
 //  value whenever filterItemName changes (using another useEffect hook).
-  useEffect(() => {
-    const filteredItems = items.filter(item =>
-      item.name.toLowerCase().includes(filterItemName.toLowerCase())
-    );
-    setItems(filteredItems);
-  }, [filterItemName]);
+  // useEffect(() => {
+  //   const filteredItems = items.filter(item =>
+  //     item.name.toLowerCase().includes(filterItemName.toLowerCase())
+  //   );
+  //   setItems(filteredItems);
+  // }, [filterItemName]);
 
+  // The AddToCart function sends a 
+  // PATCH request to http://localhost:8081/item/update/{id} (where {id} is the item ID).
+  // It updates the cart property of the item with the specified id using the current cart state value.
+
+  function AddToCart(id) {
+    axios.patch("http://localhost:8081/item/update/" + id, { cart: { id: cart } })
+
+      .then(response => {
+      })
+
+      .catch(err => console.error(err))
+  };
 
 
   return (
@@ -65,7 +79,7 @@ function AvailableStockPage() {
           <br />
           <h4>{item.name}</h4>
           <h6>£ {item.price}</h6>
-          <Button variant="danger">
+          <Button variant="danger" onClick={()=> AddToCart(item.id)} >
             <strong><MdOutlineShoppingCart /> Add to basket</strong>
           </Button>
         </Card>
