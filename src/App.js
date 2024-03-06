@@ -22,7 +22,7 @@ function App() {
               to="/"
               style={{ textDecoration: "none", color: "#254144" }}
             >
-              <strong><LuMountainSnow size={40} />
+              <strong><LuMountainSnow size={30} />
 </strong>
             </Link>
           </Nav>
