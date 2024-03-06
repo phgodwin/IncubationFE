@@ -35,16 +35,13 @@ function CartItems() {
               <td>
                 <img
                   src={cItem.image}
-                  width={1}
-                  height={1}
                   className="item-images-cart"
                   alt="itemImage"
                 />
               </td>
               <td>
                 <h6>{cItem.name}</h6>
-              </td>
-              <td>
+
                 <h6>£ {cItem.price}</h6>
               </td>
               <td>
@@ -83,7 +80,7 @@ function CartItems() {
 
   return (
     <div>
-    <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
+      <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
       <br></br>
       {cartItems}
       <h4>Total Items: {totalItems} </h4>
