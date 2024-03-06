@@ -23,24 +23,17 @@ function AvailableStockPage() {
       .catch(err => console.error(err));
   }
   useEffect(() => getItems()
-      , []);
+    , []);
 
 
 
-  // Filter items based on search value
-  // useEffect(() => {
-  //   const filteredItems = items.filter(item =>
-  //     item.name.toLowerCase().includes(filterItemName.toLowerCase())
-  //   );
-  //   setItems(filteredItems);
-  // }, [filterItemName]);
 
   // add to cart button logic
   function AddToCart(id) {
     axios.patch("http://localhost:8081/item/update/" + id, { cart: { id: cart } })
 
       .then(response => {
-              })
+      })
 
       .catch(err => console.error(err))
   };
@@ -56,7 +49,9 @@ function AvailableStockPage() {
         className="form-control"
       />
 
-      {items.map(item => (
+      {items.filter(item =>
+        item.name.toLowerCase().includes(filterItemName.toLowerCase())
+      ).map(item => (
         <Card
           key={item.id}
           className="col-sm-6 col-md-4 col-lg-3 m-3"
@@ -69,7 +64,7 @@ function AvailableStockPage() {
           <br />
           <h5>{item.name}</h5>
           <h5>£ {parseFloat(item.price).toFixed(2)}</h5>
-          <button  class="my-button" onClick={()=> AddToCart(item.id)} >
+          <button class="my-button" onClick={() => AddToCart(item.id)} >
             <strong><MdOutlineShoppingCart size={25} /> ADD TO CART</strong>
           </button>
         </Card>
