@@ -10,9 +10,11 @@ import AddStockPage from "./components/items/AddStockPage";
 import AvailableStockPage from "./components/items/AvailableStockPage";
 import EditItem from "./components/items/EditItem";
 import mountain from "./mountain.png";
-import CartItems from "./components/cart/CartItems";
+
 
 function App() {
+   
+  
   return (
     <Router>
       <Navbar>
