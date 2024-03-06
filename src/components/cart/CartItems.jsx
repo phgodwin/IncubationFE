@@ -28,7 +28,9 @@ function CartItems() {
     cartItems.push(
       <div>
         <Table>
+          
           <tbody>
+
             <tr width={50}>
               <td>
                 <img
@@ -76,11 +78,11 @@ function CartItems() {
   }
 
   return (
-    <div className="cart-container2">
-      <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
+    <div className="form-control">
       <br></br>
       {cartItems}
-      <h4>Total Items: {totalItems} </h4>
+      <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
+
     </div>
   );
 }
