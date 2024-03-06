@@ -4,11 +4,11 @@ import Paistina from "./components/Paistina";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
+import { LuMountainSnow } from "react-icons/lu";
+
 import AddStockPage from "./components/items/AddStockPage";
 import AvailableStockPage from "./components/items/AvailableStockPage";
 import EditItem from "./components/items/EditItem";
-import mountain from "./mountain.png";
-import CartItems from "./components/cart/CartItems";
 import "./App.css";
 
 function App() {
@@ -22,11 +22,8 @@ function App() {
               to="/"
               style={{ textDecoration: "none", color: "#254144" }}
             >
-              <img
-                src={mountain}
-                alt="Home"
-                style={{ width: "30px", height: "30px" }}
-              />
+              <strong><LuMountainSnow size={40} />
+</strong>
             </Link>
           </Nav>
           <Nav className="float-left">
@@ -51,7 +48,7 @@ function App() {
             <Link
               className="my-button-create"
               to="/Home"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", color: "#254144" }}
             >
               <strong>REGISTER</strong>
             </Link>
