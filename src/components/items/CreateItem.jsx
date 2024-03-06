@@ -92,7 +92,7 @@ function CreateItem() {
 
             <br />
             <h4>{item.name}</h4>
-            <h6> £ {item.price}</h6>
+            <h6> £ {parseFloat(item.price).toFixed(2)}</h6>
             Items left: {item.quantity}
             <br />
             <br />

@@ -20,7 +20,7 @@ function App() {
           <Nav className="float-left">
             <Link
               className="nav-link"
-              to="/Paistina"
+              to="/"
               style={{ textDecoration: "none", color: "#254144" }}
             >
               <img
@@ -71,7 +71,7 @@ function App() {
       </Navbar>
 
       <Routes>
-        <Route path="/Paistina" element={<Paistina />}></Route>
+        <Route path="/" element={<Paistina />}></Route>
 
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/AddStock" element={<AddStockPage />}></Route>

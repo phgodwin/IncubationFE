@@ -68,7 +68,7 @@ function AvailableStockPage() {
           <img src={item.image} className="item-images" alt="itemImage" />
           <br />
           <h5>{item.name}</h5>
-          <h5>£ {item.price}</h5>
+          <h5>£ {parseFloat(item.price).toFixed(2)}</h5>
           <button  class="my-button" onClick={()=> AddToCart(item.id)} >
             <strong><MdOutlineShoppingCart size={25} /> ADD TO CART</strong>
           </button>

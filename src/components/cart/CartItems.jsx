@@ -42,7 +42,7 @@ function CartItems() {
               <td>
                 <h6>{cItem.name}</h6>
 
-                <h6>£ {cItem.price}</h6>
+                <h6>£ {parseFloat(cItem.price).toFixed(2)}</h6>
               </td>
               <td>
                 <button
