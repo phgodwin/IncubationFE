@@ -10,9 +10,7 @@ function AvailableStockPage() {
   const [items, setItems] = useState([]);
   const [filterItemName, setFilterItemName] = useState("");
   const [cart, setCart] = useState(1);
-
   // Fetch items from the server on component
-
   function getItems() {
     axios
       .get("http://localhost:8081/item/get")
@@ -26,9 +24,9 @@ function AvailableStockPage() {
 
   // Filter items based on search value
   useEffect(() => {
-    const filteredItems = items.filter((item) =>
-      item.name.toLowerCase().includes(filterItemName.toLowerCase())
-    );
+    const filteredItems = items.filter((item) => {
+      return item.name.toLowerCase().includes(filterItemName.toLowerCase());
+    });
     setItems(filteredItems);
   }, [filterItemName]);
 
@@ -41,7 +39,6 @@ function AvailableStockPage() {
 
       .catch((err) => console.error(err));
   }
-
   return (
     <div className="container">
       <input

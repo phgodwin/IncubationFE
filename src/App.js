@@ -51,7 +51,7 @@ function App() {
             <Link
               className="my-button-create"
               to="/Home"
-              style={{ textDecoration: "none", color: "#254144" }}
+              style={{ textDecoration: "none" }}
             >
               <strong>REGISTER</strong>
             </Link>
