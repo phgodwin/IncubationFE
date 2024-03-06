@@ -56,8 +56,7 @@ function CreateItem() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h3>Create your Items</h3>
-
+      <h3>CREATE YOUR ITEMS</h3>
         <input type="text" className="form-control" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}></input>
         <br />
         <input type="number" className="form-control" defaultValue="0.00" min="0" step="0.01" placeholder="Price in £" value={price} onChange={event => setPrice(event.target.value)} ></input>
@@ -75,8 +74,8 @@ function CreateItem() {
 
         />
         <br />
-        <button type="submit" className="btn btn-success btn-md" style={{ backgroundColor: "#1C2938", borderColor: "white", color: "white" }}
-        >Create!</button>
+        <button  class="my-button-create">
+<strong>CREATE</strong></button>
 
       </form>
       <br />
@@ -98,7 +97,7 @@ function CreateItem() {
             <br />
             <br />
 
-            <button onClick={() => navigate("/edit/" + item.id)}>Edit Item</button>
+            <button class="my-button" onClick={() => navigate("/edit/" + item.id)}><strong>EDIT ITEM</strong></button>
 
           </Card>
         ))}

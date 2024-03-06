@@ -59,7 +59,7 @@ function AvailableStockPage() {
       {items.map(item => (
         <Card
           key={item.id}
-          className="col-sm-6 col-md-4 col-lg-3 m-4"
+          className="col-sm-6 col-md-4 col-lg-3 m-3"
           style={{ textAlign: "center" }}
         >
           <div style={{ position: "absolute", top: 10, right: 10, transform: "scale(2)" }}>
@@ -67,11 +67,11 @@ function AvailableStockPage() {
           </div>
           <img src={item.image} className="item-images" alt="itemImage" />
           <br />
-          <h4>{item.name}</h4>
-          <h6>£ {item.price}</h6>
-          <Button variant="danger" onClick={()=> AddToCart(item.id)} >
-            <strong><MdOutlineShoppingCart /> Add to basket</strong>
-          </Button>
+          <h5>{item.name}</h5>
+          <h5>£ {item.price}</h5>
+          <button  class="my-button" onClick={()=> AddToCart(item.id)} >
+            <strong><MdOutlineShoppingCart size={25} /> ADD TO CART</strong>
+          </button>
         </Card>
       ))}
     </div>

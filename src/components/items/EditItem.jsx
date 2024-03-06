@@ -37,7 +37,7 @@ function EditItem() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h3>Edit your Item</h3>
+            <h5>EDIT YOUR ITEM</h5>
 
             <input type="text" className="form-control" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}></input>
             <br />
@@ -55,8 +55,7 @@ function EditItem() {
 
             />
             <br />
-            <button type="submit" className="btn btn-success btn-md" style={{ backgroundColor: "#1C2938", borderColor: "white", color: "white" }}
-            >Submit Edit!</button>
+            <button class="my-button-create" ><strong>SUBMIT EDIT</strong></button>
         </form>);
 }
 

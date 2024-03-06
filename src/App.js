@@ -1,68 +1,85 @@
-import './App.css';
-import Cart from './components/cart/Cart';
-import Home from './components/Home';
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Logo from './Logo.png'
-import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
-import { FaShoppingCart } from "react-icons/fa";
-import AddStockPage from './components/items/AddStockPage';
-import AvailableStockPage from './components/items/AvailableStockPage';
-import EditItem from './components/items/EditItem';
+import "./App.css";
+import Cart from "./components/cart/Cart";
+import Home from "./components/Home";
+import Paistina from "./components/Paistina";
 
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
+import { FaShoppingCart } from "react-icons/fa";
+import AddStockPage from "./components/items/AddStockPage";
+import AvailableStockPage from "./components/items/AvailableStockPage";
+import EditItem from "./components/items/EditItem";
+import mountain from "./mountain.png";
+import CartItems from "./components/cart/CartItems";
 
 function App() {
   return (
-
     <Router>
-
-        <Navbar expand="lg" className="bg-light"className="navbar">
+      <Navbar>
         <Container>
-
-            {/* <Navbar.Brand href="/" >
+          <Nav className="float-left">
+            <Link
+              className="nav-link"
+              to="/Paistina"
+              style={{ textDecoration: "none", color: "#254144" }}
+            >
               <img
-                alt="Logo Icon"
-                src={Logo}
-                width="15%"
-                height="15%"
-                className="d-inline-block align-top"
+                src={mountain}
+                alt="Home"
+                style={{ width: "30px", height: "30px" }}
               />
-            </Navbar.Brand> */}
-            <Nav
-              className="me-auto"
+            </Link>
+          </Nav>
+          <Nav className="float-left">
+            <Link
+              className="nav-link"
+              to="/AddStock"
+              style={{ textDecoration: "none", color: "#254144" }}
             >
-              <Link to="/"><strong>Home</strong></Link>
-              </Nav>
-            <Nav
-              className="me-auto"
+              <strong>ADD</strong>
+            </Link>
+
+            <Link
+              className="nav-link"
+              to="/Stock"
+              style={{ textDecoration: "none", color: "#254144" }}
             >
-              <Link to="/AddStock"><strong>Add</strong></Link>
-              </Nav>
+              <strong>SHOP</strong>
+            </Link>
+          </Nav>
 
-              <Nav
-              className="me-auto"
+          <Nav className="float-rigth">
+            <Link
+              className="my-button-create"
+              to="/Home"
+              style={{ textDecoration: "none", color: "#254144" }}
             >
-              <Link to="/Stock"><strong>Shop</strong></Link>
-              </Nav>
-              
-              <Nav>
-              <Link to="/Cart" ><strong><FaShoppingCart /> </strong></Link >
-            </Nav>
-
-            </Container>
-
-        </Navbar>
-
-        
+              <strong>REGISTER</strong>
+            </Link>
+            <Link
+              className="nav-link icon-cart"
+              to="/Cart"
+              style={{ color: "#254144" }}
+            >
+              <strong>
+                <FaShoppingCart size={30} />
+              </strong>
+              <span>0</span>
+            </Link>
+          </Nav>
+        </Container>
+      </Navbar>
 
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/AddStock' element={<AddStockPage/>}></Route>
-        <Route path='/Stock' element={<AvailableStockPage />}></Route>
-        <Route path='/Cart' element={<Cart />}></Route>
-        <Route path='/edit/:id' element={<EditItem />} />
+        <Route path="/Paistina" element={<Paistina />}></Route>
+
+        <Route path="/Home" element={<Home />}></Route>
+        <Route path="/AddStock" element={<AddStockPage />}></Route>
+        <Route path="/Stock" element={<AvailableStockPage />}></Route>
+        <Route path="/Cart" element={<Cart />}></Route>
+        <Route path="/edit/:id" element={<EditItem />} />
       </Routes>
     </Router>
-
   );
 }
 
