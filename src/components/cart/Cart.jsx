@@ -4,12 +4,16 @@ import CartItems from "./CartItems";
 
 function Cart() {
   return (
+    <div>
     <div className="cart-container" >
       <h2>
-        <IoBagHandleOutline />
+        <IoBagHandleOutline size={50}/>
          My Cart
+         </h2>
+</div>
+<div className="cart-container">
          <CartItems />
-      </h2>
+    </div>
     </div>
   );
 }

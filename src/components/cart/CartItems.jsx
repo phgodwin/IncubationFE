@@ -1,10 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Logo from "../items/Logo.png";
-import { Card } from "react-bootstrap";
 import { IoTrashBin } from "react-icons/io5";
 import Table from "react-bootstrap/Table";
-
 function CartItems() {
   const [cart, setCart] = useState("");
 
@@ -26,6 +23,7 @@ function CartItems() {
   for (const cItem of cart) {
     totalPrice = totalPrice + cItem.price;
     totalItems = cart.length;
+   
 
     cartItems.push(
       <div>
@@ -38,10 +36,9 @@ function CartItems() {
                   className="item-images-cart"
                   alt="itemImage"
                 />
+                <h6>{cItem.name}</h6>
               </td>
               <td>
-                <h6>{cItem.name}</h6>
-
                 <h6>£ {cItem.price}</h6>
               </td>
               <td>
@@ -49,10 +46,10 @@ function CartItems() {
                   onClick={() => RemoveFromCart(cItem.id)}
                   style={{
                     backgroundColor: "#E78587",
-                    position: "inherit",
-                    color: "#f7e1bf",
+                    position: "center",
+                    color: "white",
                     borderRadius: "50%",
-                    padding: "2%",
+                    padding: "20%",
                     display: "flex",
                     justifyContent: "normal",
                     cursor: "pointer",
@@ -79,7 +76,7 @@ function CartItems() {
   }
 
   return (
-    <div>
+    <div className="cart-container2">
       <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
       <br></br>
       {cartItems}

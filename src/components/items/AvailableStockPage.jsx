@@ -28,12 +28,12 @@ function AvailableStockPage() {
 
 
   // Filter items based on search value
-  // useEffect(() => {
-  //   const filteredItems = items.filter(item =>
-  //     item.name.toLowerCase().includes(filterItemName.toLowerCase())
-  //   );
-  //   setItems(filteredItems);
-  // }, [filterItemName]);
+  useEffect(() => {
+    const filteredItems = items.filter(item =>
+      item.name.toLowerCase().includes(filterItemName.toLowerCase())
+    );
+    setItems(filteredItems);
+  }, [filterItemName]);
 
   // add to cart button logic
   function AddToCart(id) {

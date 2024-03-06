@@ -1,8 +1,6 @@
-import "./App.css";
 import Cart from "./components/cart/Cart";
 import Home from "./components/Home";
 import Paistina from "./components/Paistina";
-
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
@@ -11,6 +9,7 @@ import AvailableStockPage from "./components/items/AvailableStockPage";
 import EditItem from "./components/items/EditItem";
 import mountain from "./mountain.png";
 import CartItems from "./components/cart/CartItems";
+import "./App.css";
 
 function App() {
   return (
