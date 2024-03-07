@@ -31,7 +31,7 @@ function CartItems() {
           
           <tbody>
 
-            <tr width={50}>
+            <tr width={20}>
               <td>
                 <img
                   src={cItem.image}
