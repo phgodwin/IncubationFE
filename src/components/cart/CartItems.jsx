@@ -2,14 +2,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { IoTrashBin } from "react-icons/io5";
 import Table from "react-bootstrap/Table";
+import { IoBagHandleOutline } from "react-icons/io5";
 function CartItems() {
   const [cart, setCart] = useState([]);
+  const [fullName, setFullName] = useState("");
 
   function getCart() {
     axios
       .get("http://localhost:8081/cart/get/1")
       .then((response) => {
         setCart(response.data.items);
+        setFullName(response.data.fullName);
         console.log("http://localhost:8081/cart/get/1", response);
       })
       .catch((err) => console.error(err));
@@ -23,12 +26,12 @@ function CartItems() {
   for (const cItem of cart) {
     totalPrice = totalPrice + cItem.price;
     totalItems = cart.length;
-   
+
 
     cartItems.push(
-      <div>
-        <Table>
-          
+      <div className="container" >
+        <Table >
+
           <tbody>
 
             <tr width={50}>
@@ -41,7 +44,7 @@ function CartItems() {
                 <h6>{cItem.name}</h6>
               </td>
               <td>
-              <h6>£ {parseFloat(cItem.price).toFixed(2)}</h6>              </td>
+                <h6>£ {parseFloat(cItem.price).toFixed(2)}</h6>              </td>
               <td>
                 <button
                   onClick={() => RemoveFromCart(cItem.id)}
@@ -58,7 +61,7 @@ function CartItems() {
                 >
                   <IoTrashBin size={15} />
                 </button>
-                
+
               </td>
             </tr>
           </tbody>
@@ -78,12 +81,21 @@ function CartItems() {
   }
 
   return (
+    
+
     <div className="form-control">
+      <div className= "cart-container">
+    <h2> {fullName}'s Cart <IoBagHandleOutline size={50}/> </h2>
+        </div>
       <br></br>
-      {cartItems}
-      <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
+      <div>
+      { cartItems }
+  <h4>Total Cart Price: £{parseFloat(totalPrice).toFixed(2)}</h4>
+
+    </div >
 
     </div>
+
   );
 }
 
