@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { IoTrashBin } from "react-icons/io5";
 import Table from "react-bootstrap/Table";
 function CartItems() {
-  const [cart, setCart] = useState("");
+  const [cart, setCart] = useState([]);
 
   function getCart() {
     axios
@@ -46,7 +46,7 @@ function CartItems() {
                 <button
                   onClick={() => RemoveFromCart(cItem.id)}
                   style={{
-                    backgroundColor: "#E78587",
+                    backgroundColor: " #E78587",
                     position: "center",
                     color: "white",
                     borderRadius: "50%",
@@ -58,6 +58,7 @@ function CartItems() {
                 >
                   <IoTrashBin size={15} />
                 </button>
+                
               </td>
             </tr>
           </tbody>
