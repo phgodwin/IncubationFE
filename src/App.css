@@ -36,3 +36,96 @@
     transform: rotate(360deg);
   }
 }
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: #254144;
+
+  padding: 1.5em;
+
+  border-radius: 2em;
+  width: 50%;
+
+  color: #f7e1bf;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* This ensures that cards wrap to the next row when necessary */
+}
+
+.item-images {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.item-images-cart {
+  width: 10%;
+  height: 10%;
+  object-fit: fill;
+}
+.card {
+  border-radius: px;
+
+  padding: 10px 20px 30px;
+
+  margin-top: 50px;
+
+  display: flex;
+}
+
+.my-button {
+  background-color: #687670;
+  color: #f7e1bf;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.my-button:hover {
+  background-color: #f7e1bf;
+  color: #687670;
+  cursor: pointer;
+}
+.my-button-create {
+  background-color: #687670;
+  color: #f7e1bf;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.my-button-create:hover {
+  background-color: #f7e1bf;
+  color: #687670;
+  cursor: pointer;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icon-cart {
+  position: relative;
+}
+.icon-cart span {
+  background-color: #e78587;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: transparent;
+}
