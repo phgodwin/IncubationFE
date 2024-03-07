@@ -60,7 +60,7 @@ function App() {
               <strong>
                 <FaShoppingCart size={30} />
               </strong>
-              <span>0</span>
+              
             </Link>
           </Nav>
         </Container>
