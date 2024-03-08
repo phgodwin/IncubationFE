@@ -13,7 +13,7 @@ function EditItem() {
 
 
     useEffect(() => {
-        axios.get("http://localhost:8081/item/get/" + params.id)
+        axios.get("/item/get/" + params.id)
             .then((response) => {
                 setName(response.data.name);
                 setPrice(response.data.price);
@@ -28,7 +28,7 @@ function EditItem() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.patch("http://localhost:8081/item/update/" + params.id, { name, price, quantity, image })
+        axios.patch("/item/update/" + params.id, { name, price, quantity, image })
             .then(() => {
                 navigate("/AddStock")
             }).catch(error => console.error(error))

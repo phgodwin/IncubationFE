@@ -11,7 +11,7 @@ function Home() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.post("http://localhost:8081/cart/create", { fullName, email, password })
+        axios.post("/cart/create", { fullName, email, password })
             .then(response => {
 
                 setFullName("");

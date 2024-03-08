@@ -9,11 +9,11 @@ function CartItems() {
 
   function getCart() {
     axios
-      .get("http://localhost:8081/cart/get/1")
+      .get("/cart/get/1")
       .then((response) => {
         setCart(response.data.items);
         setFullName(response.data.fullName);
-        console.log("http://localhost:8081/cart/get/1", response);
+        console.log("/cart/get/1", response);
       })
       .catch((err) => console.error(err));
   }
@@ -71,7 +71,7 @@ function CartItems() {
 
     function RemoveFromCart(id) {
       axios
-        .patch("http://localhost:8081/item/updateCartItem/" + id)
+        .patch("/item/updateCartItem/" + id)
         .then((response) => {
           getCart();
         })

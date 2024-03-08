@@ -14,10 +14,10 @@ function CreateItem() {
 
   function getItems() {
     axios
-      .get("http://localhost:8081/item/get")
+      .get("/item/get")
       .then((response) => {
         setItems(response.data);
-        console.log("http://localhost:8081/item/get", response);
+        console.log("/item/get", response);
       })
       .catch((err) => console.error(err));
   }
@@ -31,7 +31,7 @@ function CreateItem() {
     const formattedPrice = parseFloat(price).toFixed(2);
 
     axios
-      .post("http://localhost:8081/item/create", {
+      .post("/item/create", {
         name,
         price: formattedPrice, // update
         quantity,

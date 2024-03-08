@@ -14,10 +14,10 @@ function AvailableStockPage() {
   // Fetch items from the server on component 
 
   function getItems() {
-    axios.get("http://localhost:8081/item/get")
+    axios.get("/item/get")
       .then(response => {
         setItems(response.data);
-        console.log("http://localhost:8081/item/get", response);
+        console.log("/item/get", response);
       })
       .catch(err => console.error(err));
   }
@@ -29,7 +29,7 @@ function AvailableStockPage() {
 
   // add to cart button logic
   function AddToCart(id) {
-    axios.patch("http://localhost:8081/item/update/" + id, { cart: { id: cart } })
+    axios.patch("/item/update/" + id, { cart: { id: cart } })
 
       .then(response => {
       })
